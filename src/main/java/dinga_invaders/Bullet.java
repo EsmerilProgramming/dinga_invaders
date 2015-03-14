@@ -1,4 +1,4 @@
-package dinga;
+package dinga_invaders;
 
 public class Bullet extends Actor {
 

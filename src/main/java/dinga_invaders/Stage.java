@@ -1,9 +1,9 @@
-package dinga;
+package dinga_invaders;
 
 import java.awt.image.ImageObserver;
 
-import dinga.cache.SoundCache;
-import dinga.cache.SpriteCache;
+import dinga_invaders.cache.SoundCache;
+import dinga_invaders.cache.SpriteCache;
 
 public interface Stage extends ImageObserver {
 

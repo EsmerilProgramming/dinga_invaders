@@ -1,4 +1,4 @@
-package dinga.cache;
+package dinga_invaders.cache;
 
 import java.net.URL;
 import java.util.HashMap;
