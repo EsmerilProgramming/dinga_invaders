@@ -1,4 +1,4 @@
-package dinga;
+package dinga_invaders;
 
 public class Monster extends Actor {
 

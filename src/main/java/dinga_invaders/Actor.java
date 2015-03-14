@@ -1,10 +1,10 @@
-package dinga;
+package dinga_invaders;
 
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
 import java.awt.image.BufferedImage;
 
-import dinga.cache.SpriteCache;
+import dinga_invaders.cache.SpriteCache;
 
 public class Actor {
 

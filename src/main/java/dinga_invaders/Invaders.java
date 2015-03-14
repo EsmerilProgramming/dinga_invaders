@@ -1,4 +1,4 @@
-package dinga;
+package dinga_invaders;
 
 import java.awt.Canvas;
 import java.awt.Color;
@@ -18,8 +18,8 @@ import java.util.ArrayList;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-import dinga.cache.SoundCache;
-import dinga.cache.SpriteCache;
+import dinga_invaders.cache.SoundCache;
+import dinga_invaders.cache.SpriteCache;
 
 @SuppressWarnings("serial")
 public class Invaders extends Canvas implements Stage, KeyListener {
