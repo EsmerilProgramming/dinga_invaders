@@ -39,7 +39,7 @@ public class Monster extends Actor {
 	public void setVx(int vx) {
 		this.vx = vx;
 	}
-	
+
 	@Override
 	public void collision(Actor actor) {
 		if (actor instanceof Bullet || actor instanceof Bomb) {
@@ -49,7 +49,7 @@ public class Monster extends Actor {
 			stage.getPlayer().addScore(20);
 		}
 	}
-	
+
 	public void spawn() {
 	    Monster monster = new Monster(stage);
 		monster.setX((int)(Math.random()*Stage.WIDTH) );
@@ -58,5 +58,5 @@ public class Monster extends Actor {
 		stage.addActor(monster);
 	}
 
-	
+
 }

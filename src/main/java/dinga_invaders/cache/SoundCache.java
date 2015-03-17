@@ -9,11 +9,11 @@ public class SoundCache extends ResourceCache {
 	protected Object loadResource(URL url) {
 		return Applet.newAudioClip(url);
 	}
-	
+
 	public AudioClip getAudioClip(String name) {
 		return (AudioClip)getResource(name);
 	}
-	
+
 	public void playSound(final String name) {
 	    new Thread(
 		    new Runnable() {
@@ -23,7 +23,7 @@ public class SoundCache extends ResourceCache {
 		    }
 		).start();
     }
-	      
+
 	public void loopSound(final String name) {
 	    new Thread(
 		    new Runnable() {
@@ -31,8 +31,8 @@ public class SoundCache extends ResourceCache {
 		            getAudioClip(name).loop();
 		        }
 		    }
-		).start();  
+		).start();
 	}
 
-	
+
 }

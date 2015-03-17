@@ -17,7 +17,7 @@ public class SpriteCache extends ResourceCache {
 			return null;
 		}
 	}
-	
+
 	public BufferedImage getSprite(String name) {
 		return (BufferedImage)getResource(name);
 	}

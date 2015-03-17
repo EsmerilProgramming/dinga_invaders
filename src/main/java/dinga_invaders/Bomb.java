@@ -10,11 +10,11 @@ public class Bomb extends Actor {
 	public static final int DOWN_LEFT = 5;
 	public static final int DOWN = 6;
 	public static final int DOWN_RIGHT = 7;
-	
+
 	protected static final int BOMB_SPEED = 5;
 	protected int vx;
 	protected int vy;
-	
+
 	public Bomb(Stage stage, int heading, int x, int y) {
 		super(stage);
 		this.x = x;
@@ -72,7 +72,7 @@ public class Bomb extends Actor {
 		}
 		setSpriteNames( new String[] {sprite});
 	}
-	
+
 	public void act() {
 		super.act();
 		y += vy;
@@ -81,5 +81,5 @@ public class Bomb extends Actor {
 			remove();
 		}
 	}
-	
+
 }

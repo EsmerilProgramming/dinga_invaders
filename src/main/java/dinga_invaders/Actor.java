@@ -20,7 +20,7 @@ public class Actor {
 	protected int frameSpeed;
 	protected int t;
 	protected boolean markedForRemoval;
-	
+
 	public Actor(Stage stage) {
 		this.stage = stage;
 		spriteCache = stage.getSpriteCache();
@@ -28,7 +28,7 @@ public class Actor {
 		frameSpeed = 1;
 		t = 0;
 	}
-	
+
 	public void paint(Graphics2D g) {
 		g.drawImage(spriteCache.getSprite(spriteNames[currentFrame]), x, y, stage);
 	}
@@ -95,21 +95,21 @@ public class Actor {
 	public void setFrameSpeed(int frameSpeed) {
 		this.frameSpeed = frameSpeed;
 	}
-	
+
 	public void remove() {
 		markedForRemoval = true;
 	}
-	
+
 	public boolean isMarkedForRemoval() {
 		return markedForRemoval;
 	}
-	
+
 	public void collision(Actor actor) {
-		
+
 	}
-	
+
 	public Rectangle getBounds() {
 		return new Rectangle(x, y, width, height);
 	}
-	
+
 }
