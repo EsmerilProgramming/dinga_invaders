@@ -1,4 +1,4 @@
-(ns dinga-invaders.main
+(ns dinga_invaders.main
   (:import dinga_invaders.Invaders))
 
 (defn -main [& args]
