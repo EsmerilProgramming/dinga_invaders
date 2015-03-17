@@ -1,4 +1,4 @@
-(ns dinga-invaders.datai)
+(ns dinga-invaders.data)
 (:import java.awt.image BufferedImage)
 
 ; tempo antes de uma interacao do loop do jogo para calular FPS
