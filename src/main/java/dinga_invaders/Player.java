@@ -15,7 +15,7 @@ public class Player extends Actor {
 	private int score;
 	private int shields;
 	private int clusterBombs;
-	
+
 	public Player(Stage stage) {
 		super(stage);
 		setSpriteNames(new String[]{"dinga.gif"});
@@ -23,23 +23,23 @@ public class Player extends Actor {
 		shields = MAX_SHIELDS;
 		score = 0;
 	}
-	
+
 	public void act() {
 	    super.act();
 		x+=vx;
 		y+=vy;
-		if (x < 0) { 
+		if (x < 0) {
 		    x = 0;
-		}    
+		}
 		if (x > Stage.WIDTH - getWidth()) {
 		    x = Stage.WIDTH - getWidth();
-		}    
+		}
 		if (y < 0) {
 		    y = 0;
-		}    
+		}
 		if (y > Stage.PLAY_HEIGHT-getHeight()) {
 		    y = Stage.PLAY_HEIGHT - getHeight();
-		}    
+		}
 	}
 
 
@@ -58,7 +58,7 @@ public class Player extends Actor {
 	public void setVy(int vy) {
 		this.vy = vy;
 	}
-	
+
 	protected void updateSpeed() {
 		vx = 0;
 		vy = 0;
@@ -75,7 +75,7 @@ public class Player extends Actor {
 			vx = PLAYER_SPEED;
 		}
 	}
-	
+
 	public void keyReleased(KeyEvent e) {
 		switch (e.getKeyCode()) {
 		   case KeyEvent.VK_DOWN: {
@@ -97,7 +97,7 @@ public class Player extends Actor {
 		}
 		updateSpeed();
 	}
-	
+
 	public void keyPressed(KeyEvent e) {
 		switch (e.getKeyCode()) {
 		   case KeyEvent.VK_UP: {
@@ -130,7 +130,7 @@ public class Player extends Actor {
 		   }
 		}
 	}
-	
+
 	public void fire() {
 		Bullet bullet = new Bullet(stage);
 		bullet.setX(x);
@@ -138,12 +138,12 @@ public class Player extends Actor {
 		stage.addActor(bullet);
 		stage.getSoundCache().playSound("missile.wav");
 	}
-	
+
 	public void fireCluster() {
 		if (clusterBombs == 0) {
 			return;
 		}
-		
+
 		clusterBombs--;
 		stage.addActor(new Bomb(stage, Bomb.UP_LEFT, x, y));
 		stage.addActor(new Bomb(stage, Bomb.UP, x, y));
@@ -174,15 +174,15 @@ public class Player extends Actor {
 	public int getClusterBombs() {
 		return clusterBombs;
 	}
-	
+
 	public void addScore(int score) {
 		this.score += score;
 	}
-	
+
 	public void addShields(int shields) {
 		this.shields += shields;
 	}
-	
+
 	public void collision(Actor actor) {
 		if (actor instanceof Monster) {
 			actor.remove();
@@ -192,16 +192,16 @@ public class Player extends Actor {
 				stage.gameOver();
 			}
 		}
-		
+
 		if (actor instanceof Laser) {
 			actor.remove();
 			addShields(-10);
 		}
-		
+
 		if (getShields() < 0) {
 			stage.gameOver();
 		}
-		
+
 	}
-	
+
 }
