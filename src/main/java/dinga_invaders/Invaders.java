@@ -25,7 +25,7 @@ import dinga_invaders.cache.SpriteCache;
 public class Invaders extends Canvas implements Stage, KeyListener {
 
 	private BufferStrategy bufferStrategy;
-	private long usedTime;
+	private long usedTime; //endCycleProccess
 	private SpriteCache spriteCache;
 	private SoundCache soundCache;
 	private ArrayList <Actor> actors;
@@ -33,7 +33,7 @@ public class Invaders extends Canvas implements Stage, KeyListener {
 	private boolean gameEnded = false;
 
 	private BufferedImage space;
-	private int t;
+	private int t; // textureBackgoundY
 
 	public void gameOver() {
 		gameEnded = true;
@@ -134,13 +134,13 @@ public class Invaders extends Canvas implements Stage, KeyListener {
 	}
 
 	public void game() {
-		usedTime = 1000;
-		t = 0;
+		usedTime = 1000; //endCycleProcess
+		t = 0; // textureBackgroundY
 		initWorld();
 		while(isVisible() && !gameEnded) {
-			t++;
+			t++; // textureBackgoundY
 
-			long startTime = System.currentTimeMillis();
+			long startTime = System.currentTimeMillis(); // startCycleProcess
 			updateWorld();
 			checkCollisions();
 			paintWorld();
