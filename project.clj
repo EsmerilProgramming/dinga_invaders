@@ -8,5 +8,5 @@
                "javac" "compile"]
   :dependencies [[org.clojure/clojure "1.6.0"]]
   :profiles {:uberjar {:aot :all}}
-  :main dinga-invaders.main)
+  :main dinga_invaders.main)
 

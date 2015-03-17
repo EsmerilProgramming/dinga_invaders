@@ -1,2 +1,2 @@
-(ns dinga_invaders.in
+(ns dinga-invaders.in)
 
