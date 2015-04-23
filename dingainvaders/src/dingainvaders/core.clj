@@ -1,7 +1,10 @@
 (ns dingainvaders.core
   (:gen-class))
 
+(import 'javax.swing.JFrame)
+
 (defn -main
-  "I don't do a whole lot ... yet."
   [& args]
-  (println "Hello, World!"))
+  (def frame (JFrame. "Dinga Invaders"))
+  (.setSize frame 800 600)
+  (.setVisible frame true))
