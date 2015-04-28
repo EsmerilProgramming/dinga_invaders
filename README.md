@@ -9,3 +9,4 @@ A small invaders based game
 4. lein javac
 5. lein run
 
+![alt Dinga Invaders](https://raw.githubusercontent.com/EsmerilProgramming/dinga_invaders/master/shots/screenshot1.png)
