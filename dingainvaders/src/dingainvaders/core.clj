@@ -1,5 +1,4 @@
-(ns dingainvaders.core
-  (:gen-class))
+(ns dingainvaders.core)
 
 (import javax.swing.JFrame)
 (import java.awt.event.KeyListener)
