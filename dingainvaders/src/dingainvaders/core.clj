@@ -5,8 +5,10 @@
 
 (defn -main
   [& args]
-  (def frame (JFrame. "Dinga Invaders"))
-  (.setSize frame 800 600)
-  (.setDefaultCloseOperation frame JFrame/EXIT_ON_CLOSE)
-  (.setLocationRelativeTo frame nil)
-  (.setVisible frame true))
+  (doto (JFrame. "Dinga Invaders")
+    (.setDefaultCloseOperation JFrame/EXIT_ON_CLOSE)
+    (.setSize 800 600)
+    (.setLocationRelativeTo nil)
+    (.setExtendedState JFrame/MAXIMIZED_BOTH)
+    (.setUndecorated true)
+    (.setVisible true)))
