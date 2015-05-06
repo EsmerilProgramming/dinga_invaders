@@ -8,6 +8,9 @@
 (import java.awt.Rectangle)
 (import java.awt.Graphics2D)
 
+;[4] i guess this is a better approach:
+; http://clojure.org/jvm_hosted
+
 ; [1] we need this:
 ; private BufferStrategy bufferStrategy;
 ; private BufferedImage bgImage;
